@@ -18,6 +18,15 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
 
+- task: TerraformInstaller@0
+  inputs:
+    terraformVersion: 'latest'
+- task: Terraform@2
+  inputs:
+    Arguments: 
+    InstallTerraform: false
+    UseAzureSub: false
+    
 - task: CopyFiles@2
   inputs:
     Contents: '**'
