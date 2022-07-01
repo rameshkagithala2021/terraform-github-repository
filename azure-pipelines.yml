@@ -21,7 +21,7 @@ steps:
 - task: CopyFiles@2
   inputs:
     Contents: '**'
-    TargetFolder: 
+    TargetFolder: Drop
 
 - task: PublishPipelineArtifact@1
   inputs:
